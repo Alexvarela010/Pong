@@ -40,12 +40,12 @@ class Ganador:
                 elif evento.type == pygame.KEYDOWN:
                     if evento.key == pygame.K_1:
                         # Usar subprocess para reiniciar el script
-                        subprocess.run([sys.executable, sys.argv[0]])  # Ejecuta el script nuevamente
                         pygame.quit()
+                        subprocess.run([sys.executable, sys.argv[0]])  # Ejecuta el script nuevamente
                         sys.exit()
 
 
-            RELOJ.tick(60)
+            RELOJ.tick(10)
 
     # Pantalla de selección de dificultad
     def seleccionar_dificultad():
